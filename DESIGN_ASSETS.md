@@ -54,6 +54,10 @@ Photos remain illustrative campaign visuals and are not represented as staff or 
 
 ## Image delivery fix and tilted ribbons
 
-Campaign images and the original logo are embedded as data URLs through lib/site-images.json and lib/brand-image.json. Their source bytes remain in public. This removes separate authenticated image requests from the rendered landing page. Project thumbnails use explicit non-negative image, overlay and text layers.
+Campaign images and the original logo are embedded as data URLs through src/lib/site-images.json and src/lib/brand-image.json. Their source bytes remain in public. This removes separate authenticated image requests from the rendered landing page. Project thumbnails use explicit non-negative image, overlay and text layers.
 
 The two text ribbons match the supplied screenshot: the white foreground ribbon slopes down to the right at +1.9 degrees, while the blue ribbon behind it slopes up at -2.8 degrees. Their vertical offset scales with viewport width to preserve the crossing position, including on mobile. Reserved vertical space and independent inner tracks preserve the text animation. Pause, hover/focus pause and reduced-motion support are preserved.
+
+## Frontend conversion
+
+The design now runs as a static React + Vite build. The former enquiry API, database, sign-in and inbox were removed from the current source. The contact form prepares email and WhatsApp drafts for the visitor to send. The private Site audience is preserved.
