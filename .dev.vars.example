@@ -1,0 +1,2 @@
+# Local development only. Matches the included portable mock identity.
+OWNER_EMAIL=seedy@sites.test
